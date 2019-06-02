@@ -112,7 +112,7 @@ const checkWin = () => {
 const resetHearts = () => {
     let scoreboard = document.querySelector('#scoreboard ol');
     let heartHTML = '<li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>';
-    for (i=0; scoreboard.childElementCount < 5; i++) {
+    for (let i=0; scoreboard.childElementCount < 5; i++) {
         scoreboard.innerHTML += heartHTML;
     }
 }
@@ -120,7 +120,7 @@ const resetHearts = () => {
 //resets keyboard with no classes and active buttons
 const resetQwerty = () => {
     let chosenButtons = document.getElementsByClassName('chosen');
-    for (i = chosenButtons.length - 1; chosenButtons.length > 0; i--) {
+    for (let i = chosenButtons.length - 1; chosenButtons.length > 0; i--) {
         chosenButtons[i].removeAttribute("disabled");
         chosenButtons[i].className = "";
     }
@@ -129,7 +129,7 @@ const resetQwerty = () => {
 //removes the last phrase from the display
 const removeOldPhrase = () => {
     let oldPhrase = document.querySelector("#phrase ul");
-    for (i = oldPhrase.childElementCount - 1; oldPhrase.childElementCount > 0; i--) {
+    for (let i = oldPhrase.childElementCount - 1; oldPhrase.childElementCount > 0; i--) {
         oldPhrase.removeChild(oldPhrase.lastChild);
     }
 }
